@@ -22,34 +22,9 @@
         <b-icon icon="Instagram"></b-icon> Instagram</b-icon>
       </p>
       <b-row cols="3">
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit001.jpg" alt="Image 1"></b-img>
+        <b-col class="mt-3" v-for="itemIg in itemIgs" :key="itemIg.id">
+          <b-img rounded fluid-grow :src="itemIg.imgUrl" :alt="itemIg.alt"></b-img>
         </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit002.jpg" alt="Image 2"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit003.jpg" alt="Image 3"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit004.jpg" alt="Image 4"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit005.jpg" alt="Image 5"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit006.jpg" alt="Image 6"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit007.jpg" alt="Image 7"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit008.jpg" alt="Image 8"></b-img>
-        </b-col>
-        <b-col class="mt-3">
-          <b-img rounded fluid-grow src="https://irenechutw.github.io/shopping-cart/src/assets/images/outfit009.jpg" alt="Image 9"></b-img>
-        </b-col>
-
 
       </b-row>
     </b-container>
@@ -64,7 +39,46 @@
     data() {
       return {
         slide: 0,
-        sliding: null
+        sliding: null,
+        itemIgs:[
+          {
+            id: "30001",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit001.jpg",
+            alt: "Image 1"
+          },
+          {
+            id: "30002",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit002.jpg",
+          },
+          {
+            id: "30003",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit003.jpg",
+          },
+          {
+            id: "30004",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit004.jpg",
+          },
+          {
+            id: "30005",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit005.jpg",
+          },
+          {
+            id: "30006",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit006.jpg",
+          },
+          {
+            id: "30007",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit007.jpg",
+          },
+          {
+            id: "30008",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit008.jpg",
+          },
+          {
+            id: "30009",
+            imgUrl: "https://irenechutw.github.io/shopping-cart/src/assets/images/outfit009.jpg",
+          }
+        ]
       }
     },
     methods: {
